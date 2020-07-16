@@ -27,6 +27,9 @@ public class Hacker : MonoBehaviour
 
     int Level;
 
+    enum Screen { Mainmenu , Password , Win }
+    Screen Currentscreen = Screen.Mainmenu;
+
     void OnUserInput(string Input )
     {
         if(Input == "menu")
@@ -37,6 +40,12 @@ public class Hacker : MonoBehaviour
         else if(Input == "1")
         {
             Level = 1;
+            startgame(Level);
+        }
+
+        else if (Input == "2")
+        {
+            Level = 2;
             startgame(Level);
         }
 
